@@ -16,6 +16,23 @@ def mangle(string):
     print(remove_third_to_last)
 
 
-mangle("hellothere")
-mangle("42 degrees Celsius")
-mangle("eeeeeee")
+# mangle("hellothere")
+# mangle("42 degrees Celsius")
+# mangle("eeeeeee")
+
+def count_e(list_of_strings):
+    total_list = []
+    for i in range(len(list_of_strings)):
+        total_list += list_of_strings[i]
+        print(total_list)
+    count = total_list.count("e")+total_list.count("E")
+    return count
+
+
+print(count_e(["hi", "hello", "EEK!"]))
+print(count_e(["Eevee", "ELITE", "economy!"]))
+print(count_e(["advErtisemEnt", "cosmEtic", "ethics!"]))
+
+
+
+
