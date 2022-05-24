@@ -29,10 +29,24 @@ def count_e(list_of_strings):
     return count
 
 
-print(count_e(["hi", "hello", "EEK!"]))
-print(count_e(["Eevee", "ELITE", "economy!"]))
-print(count_e(["advErtisemEnt", "cosmEtic", "ethics!"]))
+# print(count_e(["hi", "hello", "EEK!"]))
+# print(count_e(["Eevee", "ELITE", "economy!"]))
+# print(count_e(["advErtisemEnt", "cosmEtic", "ethics!"]))
+
+def count_vowels(list_of_strings):
+    vowel_list = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+
+    total_list = []
+    for i in range(len(list_of_strings)):
+        total_list += list_of_strings[i]
+
+    count = 0
+    for j in range(len(vowel_list)):
+        count += total_list.count(vowel_list[j])
+
+    return count
 
 
-
-
+print(count_vowels(["hi", "hello", "OOF!"]))
+print(count_vowels(["Eevee", "ELITE", "economy!"]))
+print(count_vowels(["advErtisemEnt", "cosmEtic", "ethics!"]))
